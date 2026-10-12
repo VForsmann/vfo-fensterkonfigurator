@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>VFO Fensterkonfigurator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <section id="stage" aria-label="3D-Ansicht">
+      <div id="canvas-host"></div>
+      <div id="stage-info"></div>
+      <div id="stage-empty" hidden></div>
+      <div id="stage-toolbar"></div>
+      <div id="stage-hint">Ziehen zum Drehen · Scrollen/Pinch zum Zoomen · Bauteil anklicken zum Bearbeiten</div>
+      <div id="tooltip" hidden></div>
+      <div id="loading"><div class="spinner"></div><span>3D-Ansicht wird geladen …</span></div>
+    </section>
+    <aside id="panel">
+      <header id="brand">
+        <div class="logo" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="brand-text">
+          <strong>VFO Fensterkonfigurator</strong>
+          <small>Fenster nach Maß · K3</small>
+        </div>
+      </header>
+      <nav id="tabs" aria-label="Navigation"></nav>
+      <div id="content"></div>
+      <footer id="footer"></footer>
+    </aside>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
